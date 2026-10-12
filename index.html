@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Sohana Aktar Urmi, agricultural economist researching conservation agriculture, climate adaptation and food security in Bangladesh.">
+<title>Sohana Aktar Urmi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@400;500;600&display=swap">
+<style>
+/* Layout: two columns — a sticky identity sidebar (bar, portrait, name, labelled facts, logo links) and a reading column of sections. */
+:root {
+  --bg: #FFFFFF;
+  --surface: #F5F7F6;
+  --fg: #1E2A26;
+  --muted: #5E6B66;
+  --line: #E1E6E3;
+  --accent: #1F5C46;
+  --accent-soft: #E6F0EB;
+  --gold: #A9792A;
+  --heading: #17483A;
+  --tint: #F1F6F3;
+  --gold-soft: #F7F0E2;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121614; --surface: #1A201D; --fg: #E3E8E5; --muted: #9AA6A0;
+    --line: #2A322E; --accent: #79C3A2; --accent-soft: #1C2B24; --gold: #D9B26A; --heading: #E3E8E5; --tint: #18211C; --gold-soft: #2A2416;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121614; --surface: #1A201D; --fg: #E3E8E5; --muted: #9AA6A0;
+  --line: #2A322E; --accent: #79C3A2; --accent-soft: #1C2B24; --gold: #D9B26A; --heading: #E3E8E5; --tint: #18211C; --gold-soft: #2A2416;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 17px; line-height: 1.65; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
+
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 32px; padding-block: 56px 48px; display: grid; grid-template-columns: 320px minmax(0, 1fr); gap: 72px; }
+
+/* ---------- sidebar ---------- */
+.side { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 32px); align-self: start; }
+.side::before { content: ""; display: block; height: 7px; background: var(--accent); margin-bottom: 28px; }
+.portrait {
+  width: 250px; max-width: 100%; aspect-ratio: 1; overflow: hidden;
+  background: var(--accent-soft); border-bottom: 5px solid var(--accent);
+  display: grid; place-items: center; font-family: var(--serif); font-size: 64px; color: var(--accent);
+}
+.portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.side h1 { font-family: var(--serif); font-weight: 700; color: var(--heading); font-size: 2.5rem; line-height: 1.08; margin: 26px 0 8px; letter-spacing: -0.01em; }
+.tagline { color: var(--muted); font-size: 1.05rem; margin: 0 0 22px; }
+.facts { display: flex; flex-direction: column; gap: 12px; margin: 0; }
+.facts dt { font-size: 0.76rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }
+.facts dd { margin: 0; font-size: 0.98rem; line-height: 1.5; }
+
+.social { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.social a {
+  width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center;
+  color: #FFFFFF; font-weight: 600; transition: filter .15s ease, transform .15s ease;
+}
+.social a svg { width: 16px; height: 16px; }
+.social a.li { background: #0A66C2; }
+.social a.rg { background: #00CCBB; }
+.social a.gh { background: #181717; }
+.social a.em { background: #EA4335; }
+:root[data-theme="dark"] .social a.gh { box-shadow: inset 0 0 0 1px #3A3F44; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .social a.gh { box-shadow: inset 0 0 0 1px #3A3F44; } }
+.social a:hover { filter: brightness(1.1); transform: translateY(-1px); text-decoration: none; }
+.rg-mark { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 0.85rem; line-height: 1; }
+.rg-mark sup { font-size: 0.6em; vertical-align: 0.55em; margin-left: 1px; }
+.lbl { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.theme-btn {
+  margin-top: 20px; border: 1px solid var(--line); background: var(--surface); color: var(--fg);
+  border-radius: 6px; padding: 4px 10px; font: 500 0.82rem var(--sans); cursor: pointer;
+}
+.theme-btn:hover { border-color: var(--accent); }
+
+/* ---------- main ---------- */
+main { min-width: 0; }
+.quote { margin: 0; padding: 4px 0 26px; font-family: var(--serif); font-style: italic; font-size: 1.08rem; line-height: 1.55; color: var(--muted); }
+.quote::before { content: ""; display: block; width: 40px; height: 3px; background: var(--gold); margin-bottom: 14px; border-radius: 2px; }
+.quote cite { display: block; margin-top: 6px; font-family: var(--sans); font-style: normal; font-size: 0.85rem; }
+.menu { display: flex; flex-wrap: wrap; gap: 4px 20px; padding: 12px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.menu a { color: var(--muted); font-size: 0.93rem; font-weight: 500; }
+.menu a:hover { color: var(--accent); text-decoration: none; }
+
+section { padding-top: 44px; scroll-margin-top: 56px; }
+h2 {
+  font-family: var(--serif); font-weight: 600; font-size: 1.55rem; margin: 0 0 18px; padding-bottom: 8px;
+  border-bottom: 1px solid var(--line); position: relative; color: var(--heading);
+}
+h2::after { content: ""; position: absolute; left: 0; bottom: -1px; width: 56px; height: 3px; background: var(--gold); border-radius: 2px; }
+h3 { font-size: 1.05rem; font-weight: 600; margin: 0; line-height: 1.4; }
+p { margin: 0 0 14px; }
+#about p { font-size: 1.08rem; line-height: 1.7; max-width: 64ch; }
+
+.entry { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 20px; padding: 12px 0; }
+.entry + .entry { border-top: 1px dashed var(--line); }
+.entry .date { color: var(--muted); font-weight: 500; font-size: 0.92rem; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.entry .where { color: var(--muted); font-size: 0.95rem; grid-column: 1 / -1; }
+.entry ul { grid-column: 1 / -1; margin: 4px 0 0; padding-left: 20px; font-size: 0.97rem; }
+.entry ul li::marker { color: var(--accent); }
+
+.themes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.theme { background: var(--surface); border-top: 3px solid var(--accent); border-radius: 8px; padding: 18px 20px; }
+.theme p { margin: 6px 0 0; color: var(--muted); font-size: 0.95rem; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.chips li { border: 1px solid var(--line); border-radius: 999px; padding: 3px 12px; font-size: 0.92rem; }
+
+.year { font-family: var(--serif); font-size: 1.15rem; font-weight: 600; color: var(--muted); margin: 22px 0 6px; }
+.year:first-of-type { margin-top: 0; }
+.pubs { list-style: none; margin: 0; padding: 0; }
+.pubs li { padding: 10px 0 10px 16px; border-left: 2px solid var(--accent); margin-bottom: 8px; }
+.pubs .me { font-weight: 600; font-style: italic; }
+.pubs .title { font-weight: 600; }
+.pubs .venue { font-style: italic; }
+.meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+.badge { font-size: 0.75rem; font-weight: 600; padding: 1px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); }
+.badge.plain { background: var(--surface); color: var(--muted); }
+.btn { font-size: 0.78rem; font-weight: 600; padding: 1px 9px; border-radius: 4px; border: 1px solid var(--accent); color: var(--accent); }
+.btn:hover { background: var(--accent); color: var(--bg); text-decoration: none; }
+
+.contact-box { background: var(--surface); border-radius: 10px; padding: 24px; }
+.email-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 10px; }
+.email { font-weight: 600; font-size: 1.05rem; word-break: break-all; user-select: all; }
+.copy { border: 1px solid var(--accent); background: var(--accent); color: var(--bg); border-radius: 6px; padding: 4px 10px; font: 500 0.82rem var(--sans); cursor: pointer; }
+
+footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.88rem; }
+
+/* ---------- Times New Roman + justified text ---------- */
+#about p { max-width: none; }
+#about p, .entry ul li, .entry .where, .pubs li, .contact-box p, .quote {
+  text-align: justify; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto;
+}
+
+/* ---------- subtle colour + interaction layer ---------- */
+.progress { position: fixed; top: 0; left: 0; height: 3px; width: 100%; background: var(--gold); transform-origin: 0 50%; transform: scaleX(0); z-index: 20; }
+.side { background: var(--tint); padding: 0 26px 26px; border-radius: 0 0 14px 14px; }
+.side::before { margin-inline: -26px; }
+.menu { position: sticky; top: 0; z-index: 10; background: var(--bg); }
+.menu a { position: relative; padding-bottom: 2px; transition: color .2s ease; }
+.menu a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
+.menu a:hover::after, .menu a.active::after { transform: scaleX(1); }
+.menu a.active { color: var(--accent); }
+
+.theme { transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease; }
+.theme:hover { transform: translateY(-3px); background: var(--accent-soft); box-shadow: 0 10px 24px -16px rgba(23, 72, 58, 0.5); }
+.pubs li { transition: background-color .2s ease, border-color .2s ease; border-radius: 0 6px 6px 0; }
+.pubs li:hover { background: var(--tint); border-left-color: var(--gold); }
+.entry { transition: background-color .2s ease; border-radius: 6px; margin-inline: -10px; padding-inline: 10px; }
+.entry:hover { background: var(--tint); }
+.chips li { transition: background-color .2s ease, border-color .2s ease, color .2s ease, transform .2s ease; }
+/* tools: filled green */
+#skills .chips.tools li { background: var(--accent-soft); border-color: rgba(31, 92, 70, 0.25); color: var(--accent); font-weight: 600; }
+#skills .chips.tools li:hover { background: var(--accent); border-color: var(--accent); color: var(--bg); transform: translateY(-1px); }
+/* methods: soft gold */
+#skills .chips.methods li { background: var(--gold-soft); border-color: rgba(169, 121, 42, 0.3); color: var(--fg); font-weight: 500; }
+#skills .chips.methods li:hover { border-color: var(--gold); transform: translateY(-1px); }
+/* certifications: clickable buttons */
+.chips.certs li { padding: 0; border: 0; }
+.chips.certs a {
+  display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 8px;
+  background: var(--bg); border: 1.5px solid var(--accent); color: var(--accent); font-weight: 600; font-size: 0.92rem;
+  transition: background-color .2s ease, color .2s ease, transform .2s ease;
+}
+.chips.certs a svg { width: 16px; height: 16px; flex: none; }
+.chips.certs a:hover { background: var(--accent); color: var(--bg); text-decoration: none; transform: translateY(-1px); }
+h2::after { transition: width .4s ease; }
+section:hover h2::after { width: 96px; }
+.portrait img { transition: transform .5s ease; }
+.portrait:hover img { transform: scale(1.04); }
+.contact-box { background: linear-gradient(135deg, var(--tint), var(--gold-soft)); }
+
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin: -4px 0 20px; }
+.filters button { border: 1px solid var(--line); background: var(--bg); color: var(--muted); border-radius: 999px; padding: 3px 14px; font: 500 0.86rem var(--sans); cursor: pointer; transition: all .2s ease; }
+.filters button:hover { border-color: var(--accent); color: var(--accent); }
+.filters button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+
+.to-top { position: fixed; right: 20px; bottom: calc(env(safe-area-inset-bottom, 0px) + 20px); width: 42px; height: 42px; border-radius: 50%; border: 0; background: var(--accent); color: var(--bg); cursor: pointer; display: grid; place-items: center; box-shadow: 0 8px 20px -10px rgba(0,0,0,.5); transition: opacity .25s ease, transform .25s ease; }
+.to-top[hidden] { display: none !important; }
+.to-top:hover { transform: translateY(-2px); }
+.to-top svg { width: 18px; height: 18px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; } }
+
+@media (max-width: 900px) {
+  .wrap { grid-template-columns: minmax(0, 1fr); gap: 36px; padding-inline: 18px; padding-block: 28px 40px; }
+  .side { position: static; }
+  .portrait { width: 200px; }
+  .side h1 { font-size: 2.1rem; }
+}
+@media (max-width: 560px) {
+  .entry { grid-template-columns: minmax(0, 1fr); }
+  .themes { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+<button class="to-top" id="to-top" type="button" aria-label="Back to top" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+<div class="wrap">
+  <aside class="side">
+    <div class="portrait"><img src="assets/portrait.jpg" alt="Portrait of Sohana Aktar Urmi" onerror="this.parentNode.textContent='SU';"></div>
+    <h1>Sohana<br>Aktar Urmi</h1>
+    <p class="tagline">MS Student, Agricultural Economics</p>
+    <dl class="facts">
+      <div><dt>Studying at</dt><dd>Sylhet Agricultural University, Bangladesh</dd></div>
+      <div><dt>Specialisation</dt><dd>Production Economics</dd></div>
+      <div><dt>Research focus</dt><dd>Conservation agriculture, climate adaptation and food security</dd></div>
+    </dl>
+    <nav class="social" aria-label="Profiles">
+      <a class="li" href="https://www.linkedin.com/in/sohanaaktarurmi29/" target="_blank" rel="noopener" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.2 21 14.5V21h-4v-5.8c0-1.4-.03-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1V21H9z"/></svg><span class="lbl">LinkedIn</span></a>
+      <a class="rg" href="https://www.researchgate.net/profile/Sohana-Urmi" target="_blank" rel="noopener" title="ResearchGate"><span class="rg-mark" aria-hidden="true">R<sup>G</sup></span><span class="lbl">ResearchGate</span></a>
+      <a class="gh" href="https://github.com/sohanaurmi" target="_blank" rel="noopener" title="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg><span class="lbl">GitHub</span></a>
+      <a class="em" href="mailto:akhtarsohana8@gmail.com" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span class="lbl">Email</span></a>
+    </nav>
+    <button class="theme-btn" id="theme-btn" type="button">Switch theme</button>
+  </aside>
+
+  <main>
+    <blockquote class="quote">
+      “If you desire peace, cultivate justice, but at the same time cultivate the fields to produce more bread; otherwise there will be no peace.”
+      <cite>Norman E. Borlaug, Nobel Lecture, 1970</cite>
+    </blockquote>
+    <nav class="menu" aria-label="Sections">
+      <a href="#about">About</a><a href="#education">Education</a><a href="#research">Research</a><a href="#skills">Tools &amp; Methods</a><a href="#publications">Publications</a><a href="#experience">Experience</a><a href="#leadership">Leadership</a><a href="#talks">Talks</a><a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>Farmers in Bangladesh are already living with climate change. The harder question is how quickly useful knowledge can reach them. They are the first to lose when the climate shifts, and often the last to learn how to protect their land and income. When farming stops paying, the nation's food security goes with it.</p>
+      <p>Conservation agriculture can change that. It protects the soil farmers live on, lowers what they spend and keeps their harvests standing through a changing climate. My research identifies what it takes for farmers to adopt it, and I share that knowledge with them directly. My goal is to build extensive expertise in this field and apply it through policy and international organisations, so that resilient farming reaches every farmer who needs it.</p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="entry">
+        <h3>MS in Agricultural Economics (Production Economics)</h3>
+        <span class="date">Jul 2025 – present</span>
+        <span class="where">Sylhet Agricultural University, Bangladesh · Thesis on farmer typologies and willingness to accept conservation incentives in the haor wetlands</span>
+      </div>
+      <div class="entry">
+        <h3>BS in Agricultural Economics and Business Studies</h3>
+        <span class="date">2025</span>
+        <span class="where">Sylhet Agricultural University, Bangladesh · CGPA 3.35 / 4.00</span>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+      <div class="themes">
+        <div class="theme">
+          <h3>Conservation agriculture in the haor wetlands</h3>
+          <p>Farmer typologies and willingness to accept conservation incentives across Sunamganj Sadar, Tahirpur, Dharmapasha and Jamalganj.</p>
+        </div>
+        <div class="theme">
+          <h3>Food security</h3>
+          <p>Determinants of food security among women informal workers in Khulna and among university students in Bangladesh.</p>
+        </div>
+        <div class="theme">
+          <h3>Climate adaptation and resilience</h3>
+          <p>Household adaptation choices in coastal and ephemeral regions, and the role of government and NGO institutions.</p>
+        </div>
+        <div class="theme">
+          <h3>Prices, trade and markets</h3>
+          <p>Rice price shocks and structural breaks, trade openness and institutional quality, and rice seed marketing channels.</p>
+        </div>
+      </div>
+
+      <h3 style="margin:28px 0 4px">Research Grant</h3>
+      <div class="entry">
+        <h3 style="font-weight:500">SAURES MS Research Grant</h3>
+        <span class="date">2025–2026</span>
+        <span class="where">Awarded by the Sylhet Agricultural University Research System (SAURES)</span>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Tools &amp; Methods</h2>
+      <h3 style="margin-bottom:10px">Tools</h3>
+      <ul class="chips tools">
+        <li>Python</li><li>STATA</li><li>ArcGIS</li><li>Microsoft Excel</li><li>Canva</li><li>Microsoft Office</li>
+      </ul>
+      <h3 style="margin:22px 0 10px">Methods</h3>
+      <ul class="chips methods">
+        <li>Multivariate Probit</li><li>Logistic regression</li><li>Constraint Facing Index (CFI)</li><li>Structural break detection</li><li>Willingness-to-accept analysis</li><li>Farmer typology analysis</li><li>Food security determinants</li><li>Spatial vulnerability assessment</li><li>Questionnaire design</li><li>FGD</li><li>KII</li><li>PRA</li>
+      </ul>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <div class="filters" role="group" aria-label="Filter publications">
+        <button type="button" data-filter="all" aria-pressed="true">All (6)</button>
+        <button type="button" data-filter="pub" aria-pressed="false">Published (2)</button>
+        <button type="button" data-filter="review" aria-pressed="false">Under review (4)</button>
+      </div>
+      <div class="year" data-group="pub">2026</div>
+      <ul class="pubs" data-group="pub">
+        <li>
+          <span class="me">Urmi, S. A.</span>, Zabir, A. A., Ratul, S. H. M., Antor, S. S. C., &amp; Hossain, S. (2026).
+          <span class="title">Food Security and Its Determinants among Women Informal Workers in Khulna City Corporation, Bangladesh.</span>
+          <span class="venue">Thai Journal of Public Health</span>, 56(2), 2290–2308.
+          <div class="meta"><span class="badge">First author</span><a class="btn" href="https://he02.tci-thaijo.org/index.php/jph/article/view/282785" target="_blank" rel="noopener">Article</a></div>
+        </li>
+      </ul>
+      <div class="year" data-group="pub">2024</div>
+      <ul class="pubs" data-group="pub">
+        <li>
+          <span class="me">Urmi, S. A.</span>, Bhuiyan, M. S., &amp; Zabir, A. A. (2024).
+          <span class="title">From Cafeteria to Classroom: Unraveling the Nexus of Socioeconomic Factors and Food Security among University Students in Bangladesh.</span>
+          <span class="venue">South Asian Journal of Social Studies and Economics</span>, 21(3), 71–82.
+          <div class="meta"><span class="badge">First author</span><a class="btn" href="https://journalsajsse.com/index.php/SAJSSE/article/view/785" target="_blank" rel="noopener">Article</a></div>
+        </li>
+      </ul>
+      <div class="year" data-group="review">Under review</div>
+      <ul class="pubs" data-group="review">
+        <li>
+          <span class="title">Detecting Rice Price Shocks and Structural Breaks in Bangladesh: A Data-Driven Approach to Spatial Vulnerability Assessment.</span>
+          <span class="venue">Asia-Pacific Journal of Regional Science</span>.
+          <div class="meta"><span class="badge plain">Journal article</span></div>
+        </li>
+        <li>
+          <span class="title">How Institutional Quality Mediates the Impact of Trade Openness on Asian Food Security.</span>
+          <span class="venue">Global Food Security</span>.
+          <div class="meta"><span class="badge plain">Journal article</span></div>
+        </li>
+        <li>
+          <span class="title">Climate-Smart Agriculture in Bangladesh: Conservation Trade-offs and the Missing Willingness-to-Accept Evidence.</span>
+          <span class="venue">Taylor &amp; Francis</span>.
+          <div class="meta"><span class="badge plain">Book chapter</span></div>
+        </li>
+        <li>
+          <span class="title">Do Climate-Smart Farming Practices Pay? Farm-Level Economic Viability, Risk, and Adoption Pathways in Bangladesh.</span>
+          <span class="venue">Taylor &amp; Francis</span>.
+          <div class="meta"><span class="badge plain">Book chapter</span></div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="entry">
+        <h3>Junior Customer Experience Executive</h3>
+        <span class="date">Nov 2025 – Aug 2026</span>
+        <span class="where">Clarity (through Talent Synergy), Sylhet</span>
+        <ul><li>Managed stakeholder communication and client support across digital platforms, resolving issues on time.</li></ul>
+      </div>
+      <div class="entry">
+        <h3>Intern, Resilient Homestead and Livelihood Support (RHL) Project</h3>
+        <span class="date">May – Jul 2025</span>
+        <span class="where">Nowabenki Gonomukhi Foundation · GCF–PKSF</span>
+        <ul>
+          <li>Supported climate-resilient housing and livelihood initiatives for vulnerable coastal households under the Green Climate Fund.</li>
+          <li>Assisted documentation, reporting, workshops and field visits on adaptive farming and salinity-tolerant crops.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <h3>Research Assistant</h3>
+        <span class="date">Feb – Aug 2024</span>
+        <span class="where">Bangladesh Agricultural Development Corporation (BADC)</span>
+        <ul>
+          <li>Worked on a comparative analysis of rice varietal popularity and illegal exotic rice marketing channels in Bangladesh.</li>
+          <li>Collected and analysed primary and secondary data; contributed to reports and policy recommendations.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="leadership">
+      <h2>Leadership</h2>
+      <div class="entry">
+        <h3>Field Team Leader, MS Thesis Data Collection</h3>
+        <span class="date">Sep 2026</span>
+        <span class="where">Sylhet Agricultural University · Sunamganj District</span>
+        <ul><li>Coordinated survey implementation across four haor upazilas (Sunamganj Sadar, Tahirpur, Dharmapasha and Jamalganj), leading a field team to collect primary household data on farmer typologies and willingness to accept conservation incentives.</li></ul>
+      </div>
+      <div class="entry">
+        <h3>Course Coordinator (Volunteer), Online Research Methodology Course</h3>
+        <span class="date">Aug 2024</span>
+        <span class="where">Online</span>
+        <ul><li>Coordinated a course on research fundamentals (topic selection, literature review, research methods, academic writing, referencing and plagiarism), managed registration, scheduling and certification, and donated all proceeds to flood-affected communities in Bangladesh.</li></ul>
+      </div>
+    </section>
+
+    <section id="talks">
+      <h2>Talks</h2>
+      <div class="entry">
+        <h3>Understanding Household Climate Resilience: A Multivariate Probit Analysis of Adaptation Choices in Ephemeral Region of Bangladesh</h3>
+        <span class="date">Sep 2025</span>
+        <span class="where">Poster · 3rd International Conference on Sustainable Fisheries (ICSF)</span>
+      </div>
+      <div class="entry">
+        <h3>Climate Change Induced Hazard Adaptation Strategy for Coastal Regions in Bangladesh: A Comparison of Government and Non-Government Institutions in Satkhira District</h3>
+        <span class="date">May 2024</span>
+        <span class="where">Poster · 1st International Conference on Advanced Agricultural Research (ICCAR)</span>
+      </div>
+      <h3 style="margin:28px 0 10px">Certifications</h3>
+      <ul class="chips certs">
+        <li><a href="https://drive.google.com/file/d/186Z3Lb-3-et9uIIaqqzM1tgNsWpAkKj3/view?usp=drivesdk" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.8 7 22l5-3 5 3-1.5-8.2"/></svg>Data Science and Machine Learning with Python</a></li>
+        <li><a href="https://drive.google.com/file/d/1UQcJL7deRm-_CpDgtr0K934fPc2IWBr7/view?usp=drive_link" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.8 7 22l5-3 5 3-1.5-8.2"/></svg>Certified Peer Reviewer Course</a></li>
+        <li><a href="https://drive.google.com/file/d/1OfGMz9sNrNsIXqicKlUcNe6wXY6yxNv7/view?usp=drive_link" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.8 7 22l5-3 5 3-1.5-8.2"/></svg>Synergy Summit Program 2026</a></li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-box">
+        <p style="margin:0">I welcome questions, research collaborations and invitations related to food security, climate adaptation and agricultural policy.</p>
+        <div class="email-row">
+          <a class="email" href="mailto:akhtarsohana8@gmail.com">akhtarsohana8@gmail.com</a>
+          <button class="copy" id="copy-email" type="button">Copy email</button>
+        </div>
+      </div>
+    </section>
+
+    <footer>© 2026 Sohana Aktar Urmi</footer>
+  </main>
+</div>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  try { var saved = localStorage.getItem('theme'); if (saved) root.setAttribute('data-theme', saved); } catch (e) {}
+  document.getElementById('theme-btn').addEventListener('click', function () {
+    var cur = root.getAttribute('data-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    var next = cur === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+  // reading progress + back to top
+  var bar = document.getElementById('progress'), top = document.getElementById('to-top');
+  function onScroll() {
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    var p = h > 0 ? window.scrollY / h : 0;
+    bar.style.transform = 'scaleX(' + p + ')';
+    top.hidden = window.scrollY < 600;
+  }
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  top.addEventListener('click', function () { window.scrollTo({ top: 0 }); });
+
+  // highlight current section in the menu
+  var links = {};
+  document.querySelectorAll('.menu a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          Object.keys(links).forEach(function (k) { links[k].classList.remove('active'); });
+          if (links[e.target.id]) links[e.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-30% 0px -60% 0px' });
+    document.querySelectorAll('main section[id]').forEach(function (s) { io.observe(s); });
+  }
+
+  // publication filter
+  var fbtns = document.querySelectorAll('.filters button');
+  fbtns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var f = b.getAttribute('data-filter');
+      fbtns.forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      document.querySelectorAll('#publications [data-group]').forEach(function (el) {
+        el.hidden = !(f === 'all' || el.getAttribute('data-group') === f);
+      });
+    });
+  });
+
+  var copy = document.getElementById('copy-email');
+  copy.addEventListener('click', function () {
+    function fallback() {
+      var el = document.querySelector('.email'); var r = document.createRange();
+      r.selectNodeContents(el); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      copy.textContent = 'Selected';
+    }
+    try {
+      navigator.clipboard.writeText('akhtarsohana8@gmail.com').then(function () {
+        copy.textContent = 'Copied'; setTimeout(function () { copy.textContent = 'Copy email'; }, 1600);
+      }, fallback);
+    } catch (e) { fallback(); }
+  });
+})();
+</script>
+</body>
+</html>
