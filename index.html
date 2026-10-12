@@ -162,6 +162,9 @@ footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--line);
 /* tools: filled green */
 #skills .chips.tools li { background: var(--accent-soft); border-color: rgba(31, 92, 70, 0.25); color: var(--accent); font-weight: 600; }
 #skills .chips.tools li:hover { background: var(--accent); border-color: var(--accent); color: var(--bg); transform: translateY(-1px); }
+/* research interests: outlined green */
+.chips.interests li { background: var(--bg); border: 1.5px solid var(--accent); color: var(--accent); font-weight: 600; }
+.chips.interests li:hover { background: var(--accent-soft); transform: translateY(-1px); }
 /* methods: soft gold */
 #skills .chips.methods li { background: var(--gold-soft); border-color: rgba(169, 121, 42, 0.3); color: var(--fg); font-weight: 500; }
 #skills .chips.methods li:hover { border-color: var(--gold); transform: translateY(-1px); }
@@ -233,7 +236,7 @@ section:hover h2::after { width: 96px; }
       <cite>Theodore W. Schultz, Nobel Lecture in Economic Sciences, 1979</cite>
     </blockquote>
     <nav class="menu" aria-label="Sections">
-      <a href="#about">About</a><a href="#education">Education</a><a href="#research">Research</a><a href="#skills">Tools &amp; Methods</a><a href="#publications">Publications</a><a href="#experience">Experience</a><a href="#leadership">Leadership</a><a href="#talks">Talks</a><a href="#contact">Contact</a>
+      <a href="#about">About</a><a href="#education">Education</a><a href="#research">Research</a><a href="#skills">Tools &amp; Methods</a><a href="#publications">Publications</a><a href="#experience">Experience</a><a href="#leadership">Leadership</a><a href="#conferences">Conferences</a><a href="#contact">Contact</a>
     </nav>
 
     <section id="about">
@@ -252,12 +255,17 @@ section:hover h2::after { width: 96px; }
       <div class="entry">
         <h3>BS in Agricultural Economics and Business Studies</h3>
         <span class="date">2025</span>
-        <span class="where">Sylhet Agricultural University, Bangladesh · CGPA 3.35 / 4.00</span>
+        <span class="where">Sylhet Agricultural University, Bangladesh</span>
       </div>
     </section>
 
     <section id="research">
       <h2>Research</h2>
+      <h3 style="margin-bottom:10px">Research interests</h3>
+      <ul class="chips interests">
+        <li>Conservation agriculture</li><li>Environmental &amp; natural resource economics</li><li>Payment for ecosystem services</li><li>Climate change adaptation</li><li>Food security</li><li>Farmer behaviour &amp; technology adoption</li><li>Agricultural risk &amp; resilience</li><li>Agricultural policy</li><li>Agricultural markets &amp; price analysis</li><li>Sustainable rural livelihoods</li>
+      </ul>
+      <h3 style="margin:28px 0 12px">Current research</h3>
       <div class="themes">
         <div class="theme">
           <h3>Conservation agriculture in the haor wetlands</h3>
@@ -378,7 +386,7 @@ section:hover h2::after { width: 96px; }
     <section id="leadership">
       <h2>Leadership</h2>
       <div class="entry">
-        <h3>Field Team Leader, MS Thesis Data Collection</h3>
+        <h3>Field Team Leader, Household Survey</h3>
         <span class="date">Sep 2026</span>
         <span class="where">Sylhet Agricultural University · Sunamganj District</span>
         <ul><li>Coordinated survey implementation across four haor upazilas (Sunamganj Sadar, Tahirpur, Dharmapasha and Jamalganj), leading a field team to collect primary household data on farmer typologies and willingness to accept conservation incentives.</li></ul>
@@ -391,8 +399,8 @@ section:hover h2::after { width: 96px; }
       </div>
     </section>
 
-    <section id="talks">
-      <h2>Talks</h2>
+    <section id="conferences">
+      <h2>Conferences</h2>
       <div class="entry">
         <h3>Understanding Household Climate Resilience: A Multivariate Probit Analysis of Adaptation Choices in Ephemeral Region of Bangladesh</h3>
         <span class="date">Sep 2025</span>
